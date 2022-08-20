@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Join</title>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+</head>
+<body>
+
+<div class="container">
+
+    <header class="p-3 mb-3 border-bottom">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <img class="mb-4" src="./images/wook.png" alt="" width="72" height="57">
+
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="#" class="nav-link px-2 link-secondary">Overview</a></li>
+                    <li><a href="#" class="nav-link px-2 link-dark">Inventory</a></li>
+                    <li><a href="#" class="nav-link px-2 link-dark">Customers</a></li>
+                    <li><a href="#" class="nav-link px-2 link-dark">Products</a></li>
+                </ul>
+
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                    <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+                </form>
+
+                <div class="col-md-3 text-end">
+                    <button type="button" class="btn btn-outline-primary me-2" onclick="location.href='login.html' " >Login</button>
+                    <button type="button" class="btn btn-primary">Sign-up</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <hr class="my-4">
+
+    <div style="padding: 0px 0px 20px 0px;">
+        <h2 >회원 가입</h2>
+    </div>
+
+    <div class="mb-3 " style="">
+        <form action="board.html" method="post">
+
+            <div class="mb-3 ">
+                <label for="email" class="form-label">이메일</label>
+                <input type="email" id="email" class="form-control" placeholder="ex) example@example.com">
+            </div>
+            <div class="mb-3 ">
+                <label for="password" class="form-label">비밀번호</label>
+                <input type="password" id="password" class="form-control">
+            </div>
+            <div class="mb-3 ">
+                <label for="name" class="form-label">이름</label>
+                <input type="text" id="name" class="form-control">
+            </div>
+            <div class="mb-3 ">
+                <label for="nickName" class="form-label">닉네임</label>
+                <input type="text" id="nickName" class="form-control">
+            </div>
+
+            <hr class="my-4">
+
+            <div class="my-3  justify-content-around col row">
+                <button class=" btn btn-primary btn-md output col-5" type="submit">가입하기</button>
+            </div>
+
+        </form>
+    </div>
+
+</div>
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+</body>
+</html>
