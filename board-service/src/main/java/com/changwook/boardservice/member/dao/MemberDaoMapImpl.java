@@ -11,7 +11,7 @@ import java.util.concurrent.ConcurrentHashMap;
 @Repository
 public class MemberDaoMapImpl implements MemberDao{
     private static final Map<Long, Member> store = new ConcurrentHashMap<>();
-    private static Long sequence = 0L;
+    private Long sequence = 0L;
 
     @Override
     public Member save(Member member) {

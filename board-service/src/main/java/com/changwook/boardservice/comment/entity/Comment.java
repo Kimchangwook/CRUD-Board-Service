@@ -18,11 +18,9 @@ public class Comment {
     private LocalDateTime createTime;
     private LocalDateTime modifiedTime;
 
-    public Comment(Long postId, Long writerId, String comment, LocalDateTime createTime, LocalDateTime modifiedTime) {
+    public Comment(String comment) {
         this.postId = postId;
         this.writerId = writerId;
         this.comment = comment;
-        this.createTime = createTime;
-        this.modifiedTime = modifiedTime;
     }
 }

@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-public class CommentDaoImpl implements CommentDao{
+public class CommentDaoMapImpl implements CommentDao{
     private static final Map<Long, Comment> store = new ConcurrentHashMap<>();
     private static Long sequence = 0L;
 

@@ -18,11 +18,9 @@ public class Post {
     private LocalDateTime createTime;
     private LocalDateTime modifiedTime;
 
-    public Post(Long memberId, String title, String content, LocalDateTime createTime, LocalDateTime modifiedTime) {
+    public Post(String title, String content) {
         this.title = title;
         this.content = content;
-        this.createTime = createTime;
-        this.modifiedTime = modifiedTime;
     }
 
 }

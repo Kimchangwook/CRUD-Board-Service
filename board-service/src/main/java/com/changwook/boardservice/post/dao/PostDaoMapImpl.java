@@ -8,7 +8,7 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Repository
-public class PostDaoImpl implements PostDao{
+public class PostDaoMapImpl implements PostDao{
 
     private static final Map<Long, Post> store = new ConcurrentHashMap<>();
     private static Long sequence = 0L;
@@ -32,18 +32,6 @@ public class PostDaoImpl implements PostDao{
     @Override
     public List<Post> findAll() {
         return new ArrayList<>(store.values());
-    }
-
-    @Override
-    public List<Post> findBySearching(String searchWord) {
-        List<Post> posts = new ArrayList<>();
-        List<Post> findPosts = findAll();
-        for (Post post : findPosts) {
-            if(post.getTitle().toLowerCase().contains(searchWord.toLowerCase()))
-                posts.add(post);
-        }
-
-        return posts;
     }
 
     @Override
