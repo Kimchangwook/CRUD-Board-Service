@@ -1,4 +1,4 @@
-package com.changwook.boardservice.post.dao;
+package com.changwook.boardservice.member.dao;
 
 import com.changwook.boardservice.member.entity.Member;
 
@@ -10,7 +10,7 @@ public interface MemberDao {
     Member save(Member member);
     Member findById(Long id);
     Member findByEmail(String email);
-    List<Member> findByAll();
+    List<Member> findAll();
     void delete(Long id);
     Member update(Long id, Member newMember);
 

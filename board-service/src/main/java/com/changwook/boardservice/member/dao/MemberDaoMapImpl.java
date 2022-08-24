@@ -1,14 +1,16 @@
-package com.changwook.boardservice.post.dao;
+package com.changwook.boardservice.member.dao;
 
 import com.changwook.boardservice.member.entity.Member;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+@Repository
 public class MemberDaoMapImpl implements MemberDao{
-    private static Map<Long, Member> store = new ConcurrentHashMap<>();
+    private static final Map<Long, Member> store = new ConcurrentHashMap<>();
     private static Long sequence = 0L;
 
     @Override
@@ -26,7 +28,7 @@ public class MemberDaoMapImpl implements MemberDao{
 
     @Override
     public Member findByEmail(String email) {
-        List<Member> members = findByAll();
+        List<Member> members = findAll();
         for (Member member : members) {
             if(member.getEmail().equals(email))
                 return member;
@@ -35,7 +37,7 @@ public class MemberDaoMapImpl implements MemberDao{
     }
 
     @Override
-    public List<Member> findByAll() {
+    public List<Member> findAll() {
         return new ArrayList<>(store.values());
     }
 
